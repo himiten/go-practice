@@ -1,0 +1,35 @@
+@import "compass/css3";
+
+@include font-face('Raleway', font-files('/fonts/raleway-webfont.woff', woff,
+        '/fonts/raleway.ttf', truetype,'/fonts/raleway.otf',opentype));
+
+@include font-face('Simyou',
+        font-files('/fonts/simyou-webfont.woff', woff,
+                  '/fonts/simyou-webfont.woff2', woff2,
+                  '/fonts/simyou.ttf', truetype));
+
+@include font-face('Fzz',
+        font-files('/fonts/fzz-webfont.woff', woff,
+                '/fonts/fzz-webfont.woff2', woff2,
+                '/fonts/fzz.ttf', truetype));
+
+@include font-face('NotoBI',
+        font-files('/fonts/notosans-bolditalic-webfont.woff2', woff2,
+                '/fonts/notosans-bolditalic-webfont.woff', woff,
+                '/fonts/NotoSans-BoldItalic.ttf', truetype));
+
+@include font-face('NotoB',
+        font-files('/fonts/notosans-bold-webfont.woff2', woff2,
+                '/fonts/notosans-bold-webfont.woff', woff,
+                '/fonts/NotoSans-Bold.ttf', truetype));
+
+@include font-face('NotoI',
+        font-files('/fonts/notosans-italic-webfont.woff2', woff2,
+                '/fonts/notosans-italic-webfont.woff', woff,
+                '/fonts/NotoSans-Italic.ttf', truetype));
+
+@include font-face('Noto',
+        font-files('/fonts/notosans-regular-webfont.woff2', woff2,
+                '/fonts/notosans-regular-webfont.woff', woff,
+                '/fonts/NotoSans-Regular.ttf', truetype));
+h1, h2, h3, h4, h5, h6, p{font-weight: normal;font-size: 100%;}
