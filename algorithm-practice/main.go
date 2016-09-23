@@ -25,4 +25,14 @@ func main(){
 	algo.QuickSort(arr)
 	end := time.Now()
 	fmt.Println("耗时：", end.Sub(start))
+
+	rangeParams("sting",14);
+	var m runtime.MemStats
+	runtime.ReadMemStats(&m)
+	fmt.Printf("%d Kb\n", m.Alloc/1024)
+}
+
+func rangeParams(args ...interface{}){
+	fmt.Printf("%T %T\n",args[0],args[1])
+	fmt.Printf("%v\n",args)
 }
