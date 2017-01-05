@@ -3,8 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "start": "go run server.go",
-    "watch":"fswatch"
+    "watch-gear":"gin -p 4000 -a 4001 -b watch -t ./gear-web run"
   },
   "author": "",
   "license": "ISC"
