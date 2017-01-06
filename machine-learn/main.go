@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	. "github.com/chewxy/gorgonia"
+	."github.com/chewxy/gorgonia"
 	"log"
 )
 

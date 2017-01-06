@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "watch-gear":"gin -p 4000 -a 4001 -b watch -t ./gear-web run"
+    "watch-gear":"gin -p 4000 -a 4001 -b watch-gear -t ./gear-web run",
+    "watch-echo":"gin -p 5000 -a 5001 -b watch-echo -t ./echo-web run"
   },
   "author": "",
   "license": "ISC"

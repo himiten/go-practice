@@ -2,8 +2,8 @@ package db
 
 import(
 	"log"
-	"gopkg.in/mgo.v2"
-	"gopkg.in/mgo.v2/bson"
+	"gopkg.in/mgo"
+	"gopkg.in/mgo/bson"
 	"time"
 )
 
