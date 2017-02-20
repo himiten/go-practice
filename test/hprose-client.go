@@ -14,8 +14,6 @@ type Person struct {
 
 }
 
-
-
 type Stub struct {
 	Hello func(string) (string, error) `simple:"true"`
 	AsyncHello func(func(string, error), string) `name:"hello"`

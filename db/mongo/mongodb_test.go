@@ -6,10 +6,10 @@ import (
 )
 
 func Test_getMongoCli(t *testing.T){
-	getMongoCli()
+	//getMongoCli()
 }
 func Test_operatMongoDB(t *testing.T){
-	operatMongoDB()
+	//operatMongoDB()
 }
 
 

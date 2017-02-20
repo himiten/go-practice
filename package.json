@@ -4,7 +4,8 @@
   "description": "",
   "scripts": {
     "watch-gear":"gin -p 4000 -a 4001 -b watch-gear -t ./gear-web run",
-    "watch-echo":"gin -p 5000 -a 5001 -b watch-echo -t ./echo-web run"
+    "watch-echo":"gin -p 5000 -a 5001 -b watch-echo -t ./echo-web run",
+    "watch-iris":"gin -p 6000 -a 6001 -b watch-iris -t ./iris-web run"
   },
   "author": "",
   "license": "ISC"

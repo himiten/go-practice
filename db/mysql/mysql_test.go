@@ -1,4 +1,4 @@
-package db
+package mysql
 
 import (
 	//"fmt"
@@ -6,5 +6,5 @@ import (
 )
 
 func Test_getDB(t *testing.T){
-	GetReportTitles("id = 5")
+	GetReportTitles("id = 1")
 }
