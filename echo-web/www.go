@@ -23,9 +23,9 @@ type Person struct {
 func genMatrix(rows,cols int) [][]float64{
 	temp:=alg.GenMatrix(rows,cols)
 	fmt.Println(temp)
-	const ROW  = rows
+	/*const ROW  = rows
 	const COL  = cols
-
+*/
 	return temp
 	/*var str string
 	for i:=0;i<rows;i++ {

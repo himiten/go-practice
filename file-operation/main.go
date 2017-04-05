@@ -7,6 +7,7 @@ import (
 	"io/ioutil"
 	"os"
 	//"path/filepath"
+	//"bufio"
 )
 
 func main() {
@@ -29,15 +30,15 @@ func main() {
 	if err == nil {
 		fmt.Printf("The input was: %s\n", input)
 	}*/
-	//inputFile, inputErr := os.Open("../public/font.scss")
-	//if inputErr != nil {
-	//	fmt.Printf("文件读取失败:\n%v\n",inputErr)
-	//	return
-	//}
-	//defer inputFile.Close()
-	/*inputReader := bufio.NewReader(inputFile)
-	lineNum:=1*/
-	/*for {
+	/*inputFile, inputErr := os.Open("../public/font.scss")
+	if inputErr != nil {
+		fmt.Printf("文件读取失败:\n%v\n",inputErr)
+		return
+	}
+	defer inputFile.Close()
+	inputReader := bufio.NewReader(inputFile)
+	lineNum:=1
+	for {
 		inputStr, readErr := inputReader.ReadString('\n')
 		if readErr == io.EOF{
 			break
@@ -45,12 +46,11 @@ func main() {
 		fmt.Printf("%d:%s\n",lineNum,inputStr)
 		lineNum++
 	}*/
-	//buf,err:=ioutil.ReadFile("../public/font.scss")
-	//if err!=nil{
-	//	fmt.Fprintf(os.Stderr,"File Error:%s\n",err)
-	//}//
-	//fmt.Printf("%v\n", buf)
-	//fmt.Printf("%s\n", string(buf))
+	buf,err:=ioutil.ReadFile("../public/font.scss")
+	if err!=nil{
+		fmt.Fprintf(os.Stderr,"File Error:%s\n",err)
+	}
+	fmt.Printf("%s\n", string(buf))
 	//err = ioutil.WriteFile("../temp/test.txt", buf, 0644) // oct, not hex
 	//if err != nil {
 	//	panic(err. Error())
@@ -61,10 +61,10 @@ func main() {
 	}
 	files,err:=ioutil.ReadDir(dirpath)
 	if err!=nil {
-		panic(err.Error())
+		fmt.Println(err.Error())
 	}else{
 		for _,file := range files{
-			//fmt.Println(pos,file)
+			fmt.Println(file)
 			fmt.Printf(" %s  ",file.Name())
 		}
 	}
