@@ -1,7 +1,7 @@
 package main
 import (
 	"github.com/jinzhu/gorm"
-	_ "github.com/jinzhu/gorm/dialects/sqlite"
+	_ "github.com/jinzhu/gorm/dialects/postgres"
 	"github.com/labstack/gommon/log"
 	"fmt"
 	"time"
@@ -28,7 +28,7 @@ func (User) TableName() string{
 }
 
 func main() {
-	db, err := gorm.Open("sqlite3", "./gorm-test/test.db")
+	db, err := gorm.Open("postgres", "host=localhost user=postgres dbname=test sslmode=disable password=tiger")
 	if err != nil {
 		log.Fatalf("failed to connect database,error:%#v",err)
 	}
@@ -40,13 +40,14 @@ func main() {
 	defer db.Close()
 	//db.LogMode(true)
 	// Migrate the schema
+	db=db.Table("test.user")
 	db.AutoMigrate(&User{})
 
-	// Create
-	/*db.Create(&User{Name: "kity", Balance: 1000})
+	// insert
+	db.Create(&User{Name: "kity", Balance: 1000})
 	db.Create(&User{Name: "lili", Balance: 100})
 	db.Create(&User{Name: "jete", Balance: 500})
-	db.Create(&User{Name: "france", Balance: 2000})*/
+	db.Create(&User{Name: "france", Balance: 2000})
 
 	// Read
 	var user User
