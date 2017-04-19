@@ -170,3 +170,31 @@ func Transpose(m [][]float64) [][]float64 {
 	}
 	return matrix
 }
+
+func YangTriangle(n int) (yt []int32) {
+	if n<1 {
+		return
+	}else if n==1{
+		yt=append(yt,1)
+		return
+	}else {
+		yt=[]int32{1,2,1}
+		for i:=1;i<n;i++{
+			temp:=make([]int32,i+2)
+			if len(yt) != len(temp){
+				length:=len(temp)
+				for j:=0;j<length;j++{
+					temp[0]=1;temp[length-1]=1
+					if j>0 && j<length-1{
+						temp[j]=yt[j-1]+yt[j]
+					}
+				}
+				yt=make([]int32,i+2)
+				copy(yt,temp)
+			}
+
+		}
+		return
+	}
+
+}

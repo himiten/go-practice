@@ -1,9 +1,16 @@
 {
-  "name": "web-martini",
+  "name": "web-watch",
   "version": "1.0.0",
   "description": "",
   "scripts": {
+<<<<<<< HEAD
     "start": "go run server.go"
+=======
+    "watch-gear":"gin -p 4000 -a 4001 -b watch-gear -t ./gear-web run",
+    "watch-echo":"gin -p 5000 -a 5001 -b watch-echo -t ./echo-web run",
+    "watch-iris":"gin -p 8000 -a 8080 -i -b watch-iris -t ./iris-web run",
+    "start iris": "go run ./iris-web/app.go"
+>>>>>>> go-web
   },
   "author": "",
   "license": "ISC"

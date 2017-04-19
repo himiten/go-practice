@@ -13,8 +13,7 @@ func main() {
 	flag.Parse()
 	l, err := net.Listen("tcp", *addr)
 	if err != nil {
-		log.Print("listen: ", err)
-		return
+		log.Fatalf("listen errror: %#v", err)
 	}
 	svr := mqtt.NewServer(l)
 	svr.Start()
